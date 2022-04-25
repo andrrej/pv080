@@ -1,7 +1,6 @@
-import yaml
 import subprocess
 import hashlib
-import subprocess
+import yaml
 import flask
 
 
@@ -24,11 +23,11 @@ def authenticate(password):
 
 def fetch_website(urllib_version, url):
     # Import the requested version of urllib
-    exec(f"import urllib{urllib_version} as urllib", globals())
+    exec(f'import urllib{urllib_version} as urllib', globals())
     # Fetch and print the requested URL
-    http = urllib.PoolManager()
-    r = http.request('GET', url)
-    return r.data
+    http = urllib_version.PoolManager()
+    ra_ss = http.request('GET', url)
+    return ra_ss.data
 
 
 
